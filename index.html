@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi Saya</title>
+
+    <style>
+        /* Reset sederhana */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        .profil {
+            display: flex;
+            gap: 25px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .profil img {
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .info-profil {
+            flex: 1;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            margin-bottom: 25px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+
+        .list-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+        }
+
+        form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .pilihan label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1abc9c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 25px;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        /* Tampilan tablet */
+        @media (max-width: 768px) {
+            .profil {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .list-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Tampilan mobile */
+        @media (max-width: 480px) {
+            header {
+                padding: 18px;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            .profil,
+            .card,
+            form {
+                padding: 18px;
+            }
+
+            table, th, td {
+                font-size: 14px;
+            }
+
+            .pilihan label {
+                display: block;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bagian Header -->
+    <header id="header-utama" class="header" title="Judul halaman profil pribadi">
+        <h1>Profil Pribadi Saya</h1>
+    </header>
+
+    <main class="container">
+        <!-- Bagian Profil -->
+        <section class="profil" id="profil-saya" title="Bagian profil mahasiswa">
+            <img src="teguh.jpg" alt="Foto teguh" width="200" height="250">
+
+            <div class="info-profil">
+                <h2>Identitas Saya</h2>
+
+                <p>Nama lengkap saya adalah <strong>MUHAMAD TEGUH MULYAWAN</strong>.</p>
+                <p>NIM saya adalah <strong>246250095</strong>.</p>
+                <p>Hobi saya adalah main mobile legends,dan olahraga.</p>
+            </div>
+        </section>
+
+        <!-- Bagian Tabel Biodata -->
+        <section id="biodata" class="biodata" title="Tabel biodata pribadi">
+            <h2>Biodata Saya</h2>
+
+            <table>
+                <tr>
+                    <th>Data</th>
+                    <th>Keterangan</th>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td>MUHAMAD TEGUH MULYAWAN</td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>28 Agustus 2005</td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>Bamba JL.Ipi Kecamatan Tawaeli, Kelurahan Panau</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>muhamadteguhmulyawan01@gmail.com</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Bagian Daftar Hobi -->
+        <section class="list-section">
+            <div class="card" title="Daftar hobi menggunakan unordered list">
+                <h2>Daftar Hobi</h2>
+
+                <ul>
+                    <li>main mobile legends</li>
+                    <li>Olahraga</li>
+                    <li>menonton</li>
+                </ul>
+            </div>
+
+            <div class="card" title="Daftar aktivitas favorit menggunakan ordered list">
+                <h2>Aktivitas Favorit</h2>
+
+                <ol>
+                    <li>Belajar pemrograman web</li>
+                    <li>Mengerjakan tugas kuliah</li>
+                    <li>Menonton video edukasi</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Bagian Formulir -->
+        <section id="formulir" class="form-section" title="Formulir input data">
+            <h2>Formulir Data Diri</h2>
+
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda">
+                </div>
+
+                <div class="form-group">
+                    <label for="instagram">instagram</label>
+                    <input type="text" id="instagram" name="instagram" placeholder="instagram">
+                </div>
+
+                <div class="form-group pilihan">
+                    <label>Jenis Kelamin</label>
+
+                    <label>
+                        <input type="radio" name="jenis_kelamin" value="Laki-laki">
+                        Laki-laki
+                    </label>
+
+                    <label>
+                        <input type="radio" name="jenis_kelamin" value="Perempuan">
+                        Perempuan
+                    </label>
+                </div>
+
+                <div class="form-group pilihan">
+                    <label>Hobi</label>
+
+                    <label>
+                        <input type="checkbox" name="hobi" value="main mobile legends">
+                        main mobile legends
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="hobi" value="Olahraga">
+                        Olahraga
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="hobi" value="menonton">
+                        menonton
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="memasak" value="memasak">
+                        memasak
+                    </label>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Bagian Footer -->
+    <footer>
+        <p>&copy; 2026 Profil Pribadi Saya</p>
+    </footer>
+</body>
+</html>
